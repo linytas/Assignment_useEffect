@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 //let counterRef;
 const CounterFn = () => {
   console.log("render CounterFn");
-  const [title, setTitle] = React.useState("CounterFn");
+  const [title] = React.useState("CounterFn");
   const [counter, setCounter] = React.useState(0);
   const [isAlert, setIsAlert] = React.useState(false);
   const counterRef = React.useRef(counter);
@@ -16,12 +16,12 @@ const CounterFn = () => {
     setCounter(counter - 1);
   };
 
-  const hanldeAlert = () => {
-    console.log("counter alert", counter);
-    setTimeout(() => {
-      alert(counterRef.current);
-    }, 5000);
-  };
+  //   const hanldeAlert = () => {
+  //     console.log("counter alert", counter);
+  //     setTimeout(() => {
+  //       alert(counterRef.current);
+  //     }, 5000);
+  //   };
 
   const hanldeAlertWayTwo = () => {
     setTimeout(() => {
@@ -37,7 +37,7 @@ const CounterFn = () => {
   // ComponentDidUpdate
   useEffect(() => {
     if (isAlert) {
-      alert(counter);
+      alert("componentDidUpdate");
       setIsAlert(false);
     }
   }, [isAlert]);
