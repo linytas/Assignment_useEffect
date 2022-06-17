@@ -13,9 +13,9 @@ import App from "./App";
 //   <button>+</button><button>-</button>
 // </section>;
 
-const Button = ({ onClick, children }) => {
-  return <button onClick={onClick}>{children}</button>;
-};
+// const Button = ({ onClick, children }) => {
+//   return <button onClick={onClick}>{children}</button>;
+// };
 
 // const data = {
 //   counter: 5,
